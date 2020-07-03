@@ -20,6 +20,7 @@ jwt_secret = os.environ.get("JWT_SECRET")
 jwt_algorithm = os.environ.get("JWT_ALGORITHM")
 sendgrid_api_key = os.environ.get("SENDGRID_API_KEY")
 sendgrid_from_email = os.environ.get("SENDGRID_FROM_EMAIL")
+google_api_credentials = os.environ.get("GOOGLE_API_CREDENTIALS")
 
 UPLOAD_FOLDER = '/images'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -125,7 +126,7 @@ def generate_upload_signed_url_v4():
         return {"notimg":"Upload must be jpg, jpeg, or png file"}, 400
     method = request.json['method'] # PUT
 
-    storage_client = storage.Client.from_service_account_json(process.env.GOOGLE_API_CREDENTIALS)
+    storage_client = storage.Client.from_service_account_json(google_api_credentials)
     bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(blob_name)
 
@@ -237,7 +238,7 @@ def delete_recipe(id):
         if 'img' in recipe:
             blob_name = recipe['img'].split('/')[-1]
 
-            storage_client = storage.Client.from_service_account_json(process.env.GOOGLE_API_CREDENTIALS)
+            storage_client = storage.Client.from_service_account_json(google_api_credentials)
             bucket = storage_client.bucket('recipe-imgs')
             blob = bucket.blob(blob_name)
             blob.delete()
