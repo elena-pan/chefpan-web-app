@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { getRecipe, updateRecipe } from "../../actions/recipeActions";
+import { getRecipe, updateRecipe, deleteRecipe } from "../../actions/recipeActions";
 import classnames from "classnames";
 import M from "materialize-css";
 
@@ -386,5 +386,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps, 
-    { getRecipe, updateRecipe }
+    { getRecipe, updateRecipe, deleteRecipe }
 )(EditRecipe);

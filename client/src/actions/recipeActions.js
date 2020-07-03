@@ -29,15 +29,19 @@ export const addRecipe = (recipeData, history) => dispatch => {
                                     payload: res.data
                                 })
                             )
-                            .catch(err =>
-                                dispatch({
-                                    type: GET_ERRORS,
-                                    payload: err.response.data
-                                })
-                            )
                             .then(() => history.push("/recipes"))
                             .then(() => dispatch(addToast("Recipe added!", "success")))
-                            .catch(err => console.log(err))
+                            .catch(err => {
+                                if (err.response) {
+                                    dispatch({
+                                        type: GET_ERRORS,
+                                        payload: err.response.data
+                                    })
+                                }
+                                else {
+                                    console.log(err)
+                                }
+                            })
                     })
                     .catch(err => {
                         console.log(err);
@@ -57,15 +61,19 @@ export const addRecipe = (recipeData, history) => dispatch => {
                     payload: res.data
                 })
             )
-            .catch(err =>
-                dispatch({
-                    type: GET_ERRORS,
-                    payload: err.response.data
-                })
-            )
             .then(() => history.push("/recipes"))
             .then(() => dispatch(addToast("Recipe added!", "success")))
-            .catch(err => console.log(err))
+            .catch(err => {
+                if (err.response) {
+                    dispatch({
+                        type: GET_ERRORS,
+                        payload: err.response.data
+                    })
+                }
+                else {
+                    console.log(err)
+                }
+            })
     }
 };
 

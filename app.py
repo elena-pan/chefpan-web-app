@@ -9,6 +9,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 from functools import wraps
 from google.cloud import storage
+from google.oauth2 import service_account
 from db.models import Recipe, User
 import resources
 
@@ -126,7 +127,12 @@ def generate_upload_signed_url_v4():
         return {"notimg":"Upload must be jpg, jpeg, or png file"}, 400
     method = request.json['method'] # PUT
 
-    storage_client = storage.Client.from_service_account_json(google_api_credentials)
+    json_data = json.loads(google_api_credentials)
+    # the private_key needs to replace \n parsed as string literal with escaped newlines
+    json_data['private_key'] = json_data['private_key'].replace('\\n', '\n')
+    credentials = service_account.Credentials.from_service_account_info(json_data)
+
+    storage_client = storage.Client(project=json_data['project_id'], credentials=credentials)
     bucket = storage_client.bucket(bucket_name)
     blob = bucket.blob(blob_name)
 
@@ -238,7 +244,12 @@ def delete_recipe(id):
         if 'img' in recipe:
             blob_name = recipe['img'].split('/')[-1]
 
-            storage_client = storage.Client.from_service_account_json(google_api_credentials)
+            json_data = json.loads(google_api_credentials)
+            # the private_key needs to replace \n parsed as string literal with escaped newlines
+            json_data['private_key'] = json_data['private_key'].replace('\\n', '\n')
+            credentials = service_account.Credentials.from_service_account_info(json_data)
+
+            storage_client = storage.Client(project=json_data['project_id'], credentials=credentials)
             bucket = storage_client.bucket('recipe-imgs')
             blob = bucket.blob(blob_name)
             blob.delete()
@@ -247,7 +258,7 @@ def delete_recipe(id):
         recipe.delete()
         return { 'id': str(id) }
     except Exception as e:
-        return Response(str(e), 400)
+        return Response(str(e), 500)
 
 # Serve React App
 @app.route('/', defaults={'path': ''})
