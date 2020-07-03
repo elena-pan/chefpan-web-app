@@ -60,7 +60,7 @@ function App() {
             <Route exact path="/" component={Landing} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/register" component={Register} />
+            {/*<Route exact path="/register" component={Register} />*/}
             <Route exact path="/login" component={Login} />
             <Route exact path="/recipes" component={Recipes} />
             <Route exact path="/recipes/category/:category" component={Recipes} />
