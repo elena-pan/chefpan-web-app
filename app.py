@@ -32,7 +32,7 @@ db = MongoEngine()
 db.init_app(app)
 api = Api(app)
 
-api.add_resource(resources.UserRegistration, '/api/users/register')
+#api.add_resource(resources.UserRegistration, '/api/users/register')
 api.add_resource(resources.UserLogin, '/api/users/login')
 
 def validateContactForm(contactFormData):
