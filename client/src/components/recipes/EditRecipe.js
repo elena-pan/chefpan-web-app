@@ -288,12 +288,13 @@ class EditRecipe extends Component {
                         }
                         else return (
                             <div className="input-field col s12" key={idx}>
-                            <input
+                            <textarea
                             onBlur={this.onChangeStep}
                             onChange={this.onChangeStep}
                             value={this.state.steps[idx]}
                             id={idx.toString()}
                             type="text"
+                            className="materialize-textarea"
                             />
                             <label htmlFor={idx.toString()} className="active">Step {idx+1}</label>
                             <Link onClick={() => this.deleteStep(idx)}><i className="material-icons black-text prefix" style={{right:0, fontSize:"24px"}}>delete</i></Link>
