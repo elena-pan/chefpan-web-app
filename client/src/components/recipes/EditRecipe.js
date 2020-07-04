@@ -74,7 +74,8 @@ class EditRecipe extends Component {
                             'breakfast': null,'brunch': null,'lunch':null,'dinner':null,'desserts':null,
                             'east asian': null, 'mexican':null, 'indian': null,
                             'cookies':null,'cheesecakes':null,'cakes':null,'brownies':null,'pastries':null,'choux':null,
-                            'fillings':null, 'custards':null, 'sauces':null,'ice cream':null
+                            'fillings':null, 'custards':null, 'sauces':null,'ice cream':null,
+                            'basics':null,'project recipes':null,'comfort food':null,'aesthetic':null,'gift ideas':null
                         },
                         minLength: 0
                     }

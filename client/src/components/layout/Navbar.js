@@ -190,10 +190,13 @@ class Navbar extends Component {
                         <div className="col s4">
                             <ul>
                                 <li style={{paddingBottom:"0.5rem",marginRight:"2rem",borderBottom:"2px solid #f57f17",marginBottom:"1rem"}}><h6><b>Favourites</b></h6></li>
-                                <li><Link to="/recipes/category/stuff" className="black-text" onClick={this.onLeave}>Stuff</Link></li>
-                                <li><Link to="/recipes/category/things" className="black-text" onClick={this.onLeave}>Things</Link></li>
-                                <li><Link to="/recipes/category/more%20stuff" className="black-text" onClick={this.onLeave}>More stuff</Link></li>
-                                <li><Link to="/recipes/category/more%20things" className="black-text" onClick={this.onLeave}>More things</Link></li>
+                                <li><Link to="/recipes/category/basic" className="black-text" onClick={this.onLeave}>Basics</Link></li>
+                                <li><Link to="/recipes/category/chicken" className="black-text" onClick={this.onLeave}>Chicken</Link></li>
+                                <li><Link to="/recipes/category/pork" className="black-text" onClick={this.onLeave}>Pork</Link></li>
+                                <li><Link to="/recipes/category/project%20recipes" className="black-text" onClick={this.onLeave}>Project Recipes</Link></li>
+                                <li><Link to="/recipes/category/comfort%20food" className="black-text" onClick={this.onLeave}>Comfort Food</Link></li>
+                                <li><Link to="/recipes/category/aesthetic" className="black-text" onClick={this.onLeave}>Aesthetic</Link></li>
+                                <li><Link to="/recipes/category/gift%20ideas" className="black-text" onClick={this.onLeave}>Gift Ideas</Link></li>
                             </ul>
                         </div>
                         </div>
