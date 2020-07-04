@@ -190,7 +190,7 @@ def get_recipes_category(category):
         recipes = []
         categories = category.split("-")
         for category in categories:
-            categoryRegex = re.compile(category)
+            categoryRegex = re.compile(category, flags=re.IGNORECASE)
             recipes2 = Recipe.objects(Q(categories=categoryRegex) | Q(ingredients=categoryRegex) | Q(name=categoryRegex))
             for recipe in recipes2:
                 recipes.append(recipe.to_json())
