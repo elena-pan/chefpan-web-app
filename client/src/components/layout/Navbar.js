@@ -160,7 +160,7 @@ class Navbar extends Component {
                         <div className="col s4">
                             <ul>
                             <li style={{paddingBottom:"0.5rem",marginRight:"3rem",borderBottom:"2px solid #f57f17",marginBottom:"1rem"}}><h6><b>Cooking Method</b></h6></li>
-                            <li><Link to="/recipes/category/baking-roasting" className="black-text" onClick={this.onLeave}>Baking and roasting</Link></li>
+                            <li><Link to="/recipes/category/roasting" className="black-text" onClick={this.onLeave}>Roasting</Link></li>
                             <li><Link to="/recipes/category/frying" className="black-text" onClick={this.onLeave}>Frying</Link></li>
                             <li><Link to="/recipes/category/pan%20recipes" className="black-text" onClick={this.onLeave}>Pan recipes</Link></li>
                             <li><Link to="/recipes/category/braises-boiling" className="black-text" onClick={this.onLeave}>Braises and boiling</Link></li>
