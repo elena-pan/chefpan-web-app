@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import classnames from "classnames";
+import M from "materialize-css";
 import validateContactForm from "../auth/validateContactForm";
 import { submitContactForm } from "../../actions/contactActions";
 
@@ -16,6 +17,11 @@ class Contact extends Component {
         message: "",
         errors: {}
     };
+  }
+
+  componentDidMount = () => {
+    let counterElem = document.querySelectorAll('#message, #subject');
+    M.CharacterCounter.init(counterElem);
   }
 
   componentDidUpdate = prevProps => {
