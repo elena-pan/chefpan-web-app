@@ -50,7 +50,7 @@ class AddRecipe extends Component {
                     'pasta': null, 'noodles': null,'sandwiches': null,'toasts':null,'bread':null,
                     'baking': null, 'roasting': null, 'frying': null, 'pan recipes':null, 'boiling':null, 'no cook': null,
                     'breakfast': null,'brunch': null,'lunch':null,'dinner':null,'desserts':null,
-                    'east asian': null, 'mexican':null, 'indian': null, 'southern':null,
+                    'east asian': null, 'mexican':null, 'indian': null, 'southern':null, 'french':null, 'italian':null,
                     'cookies':null,'cheesecakes':null,'cakes':null,'brownies':null,'pastries':null,'choux':null,
                     'fillings':null, 'custards':null, 'sauces':null,'ice cream':null,
                     'basics':null,'project recipes':null,'comfort food':null,'aesthetic':null,'gift ideas':null

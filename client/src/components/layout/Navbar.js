@@ -175,6 +175,8 @@ class Navbar extends Component {
                             <li><Link to="/recipes/category/mexican" className="black-text" onClick={this.onLeave}>Mexican</Link></li>
                             <li><Link to="/recipes/category/indian" className="black-text" onClick={this.onLeave}>Indian</Link></li>
                             <li><Link to="/recipes/category/southern" className="black-text" onClick={this.onLeave}>Southern</Link></li>
+                            <li><Link to="/recipes/category/french" className="black-text" onClick={this.onLeave}>French</Link></li>
+                            <li><Link to="/recipes/category/italian" className="black-text" onClick={this.onLeave}>Italian</Link></li>
                             </ul>
                         </div>
                         <div className="col s4">
