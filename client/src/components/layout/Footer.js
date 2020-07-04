@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import logoWhite from "../../logo-white.svg";
 
 class Footer extends Component {
   render() {
@@ -8,7 +9,9 @@ class Footer extends Component {
           <div className="container">
             <div className="row">
               <div className="col l6 s12">
-                <h5 className="white-text" style={{ fontFamily: "monospace" }}>Elemations</h5>
+                    <Link to="/">
+                        <img src={logoWhite} alt="Elemations" style={{height:"60px"}} />
+                    </Link>
               </div>
               <div className="col l4 offset-l2 s12">
                 <ul>
