@@ -7,4 +7,5 @@ Personal Brand Web App - Recipes and YouTube Videos
 * MongoDB and Mongoose
 * Flask
 * React.js - using Redux and React router, bootstrapped with Create React App
+* Google Cloud Storage for files and images
 * Materialize as CSS framework
