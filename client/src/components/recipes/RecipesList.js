@@ -42,7 +42,7 @@ class RecipesList extends Component {
         }
         else {
             if (recipes.length > 0) {
-                content = recipes.map(recipe => (
+                content = recipes.reverse().map(recipe => (
                     <div className="col s12 m6 l3">
                         <div className="card waves-effect waves-light hoverable hoverable" style={{height:"300px"}} onClick={() => this.onRecipeClick(recipe._id.$oid)}>
                             <div className="card-image">

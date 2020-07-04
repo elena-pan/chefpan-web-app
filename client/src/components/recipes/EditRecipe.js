@@ -50,6 +50,7 @@ class EditRecipe extends Component {
                 const elems = document.querySelectorAll('.chips');
                 M.Chips.init(elems, {
                     placeholder: "Categories",
+                    secondaryPlaceholder: "",
                     data: chips,
                     onChipAdd: (e, chip) => {
                         let chipsData = e[0].M_Chips.chipsData.map(chip => chip.tag);

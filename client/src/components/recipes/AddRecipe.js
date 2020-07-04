@@ -29,6 +29,7 @@ class AddRecipe extends Component {
         const elems = document.querySelectorAll('.chips');
         M.Chips.init(elems, {
             placeholder: "Categories",
+            secondaryPlaceholder: "",
             onChipAdd: (e, chip) => {
                 let chipsData = e[0].M_Chips.chipsData.map(chip => chip.tag);
                 this.setState({ categories: chipsData });
