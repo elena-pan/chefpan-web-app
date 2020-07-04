@@ -191,7 +191,7 @@ def get_recipes_category(category):
         categories = category.split("-")
         for category in categories:
             categoryRegex = re.compile(category)
-            recipes2 = Recipe.objects(Q(categories=categoryRegex) | Q(ingredients=categoryRegex | Q(name=categoryRegex)))
+            recipes2 = Recipe.objects(Q(categories=categoryRegex) | Q(ingredients=categoryRegex) | Q(name=categoryRegex))
             for recipe in recipes2:
                 recipes.append(recipe.to_json())
         recipes = list(set(recipes)) # remove duplicates
