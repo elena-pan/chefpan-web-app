@@ -265,10 +265,11 @@ class Navbar extends Component {
                                 <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Cooking Method<i className="material-icons prefix right">arrow_drop_down</i></div>
                                 <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
                                     <ul>
-                                        <li><Link to="/recipes/category/soups-stews-braises" className="black-text sidenav-close" style={{padding:"0 32px"}}>Soups, Stews, and Braises</Link></li>
-                                        <li><Link to="/recipes/category/pasta-noodles" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pasta and Noodles</Link></li>
-                                        <li><Link to="/recipes/category/sandwiches-toasts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Sandwiches and Toasts</Link></li>
-                                        <li><Link to="/recipes/category/bread" className="black-text sidenav-close" style={{padding:"0 32px"}}>Bread</Link></li>
+                                        <li><Link to="/recipes/category/roasting" className="black-text sidenav-close" style={{padding:"0 32px"}}>Roasting</Link></li>
+                                        <li><Link to="/recipes/category/frying" className="black-text sidenav-close" style={{padding:"0 32px"}}>Frying</Link></li>
+                                        <li><Link to="/recipes/category/pan%20recipes" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pan recipes</Link></li>
+                                        <li><Link to="/recipes/category/braises-boiling" className="black-text sidenav-close" style={{padding:"0 32px"}}>Braises and boiling</Link></li>
+                                        <li><Link to="/recipes/category/no%20cook" className="black-text sidenav-close" style={{padding:"0 32px"}}>No cook</Link></li>
                                     </ul>
                                 </div>
                             </li>
@@ -276,10 +277,12 @@ class Navbar extends Component {
                                 <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Cuisine<i className="material-icons prefix right">arrow_drop_down</i></div>
                                 <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
                                     <ul>
-                                        <li><Link to="/recipes/category/soups-stews-braises" className="black-text sidenav-close" style={{padding:"0 32px"}}>Soups, Stews, and Braises</Link></li>
-                                        <li><Link to="/recipes/category/pasta-noodles" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pasta and Noodles</Link></li>
-                                        <li><Link to="/recipes/category/sandwiches-toasts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Sandwiches and Toasts</Link></li>
-                                        <li><Link to="/recipes/category/bread" className="black-text sidenav-close" style={{padding:"0 32px"}}>Bread</Link></li>
+                                        <li><Link to="/recipes/category/east%20asian" className="black-text sidenav-close" style={{padding:"0 32px"}}>East Asian</Link></li>
+                                        <li><Link to="/recipes/category/mexican" className="black-text sidenav-close" style={{padding:"0 32px"}}>Mexican</Link></li>
+                                        <li><Link to="/recipes/category/indian" className="black-text sidenav-close" style={{padding:"0 32px"}}>Indian</Link></li>
+                                        <li><Link to="/recipes/category/southern" className="black-text sidenav-close" style={{padding:"0 32px"}}>Southern</Link></li>
+                                        <li><Link to="/recipes/category/french" className="black-text sidenav-close" style={{padding:"0 32px"}}>French</Link></li>
+                                        <li><Link to="/recipes/category/italian" className="black-text sidenav-close" style={{padding:"0 32px"}}>Italian</Link></li>
                                     </ul>
                                 </div>
                             </li>
@@ -287,10 +290,12 @@ class Navbar extends Component {
                                 <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Desserts<i className="material-icons prefix right">arrow_drop_down</i></div>
                                 <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
                                     <ul>
-                                        <li><Link to="/recipes/category/soups-stews-braises" className="black-text sidenav-close" style={{padding:"0 32px"}}>Soups, Stews, and Braises</Link></li>
-                                        <li><Link to="/recipes/category/pasta-noodles" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pasta and Noodles</Link></li>
-                                        <li><Link to="/recipes/category/sandwiches-toasts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Sandwiches and Toasts</Link></li>
-                                        <li><Link to="/recipes/category/bread" className="black-text sidenav-close" style={{padding:"0 32px"}}>Bread</Link></li>
+                                        <li><Link to="/recipes/category/cookies" className="black-text sidenav-close" style={{padding:"0 32px"}}>Cookies</Link></li>
+                                        <li><Link to="/recipes/category/cheesecakes" className="black-text sidenav-close" style={{padding:"0 32px"}}>Cheesecakes</Link></li>
+                                        <li><Link to="/recipes/category/cakes-brownies" className="black-text sidenav-close" style={{padding:"0 32px"}}>Cakes and Brownies</Link></li>
+                                        <li><Link to="/recipes/category/pastries-choux" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pastries and Choux</Link></li>
+                                        <li><Link to="/recipes/category/fillings-custards-sauces" className="black-text sidenav-close" style={{padding:"0 32px"}}>Fillings, Custards, and Sauces</Link></li>
+                                        <li><Link to="/recipes/category/ice%20cream" className="black-text sidenav-close" style={{padding:"0 32px"}}>Ice Cream</Link></li>
                                     </ul>
                                 </div>
                             </li>
@@ -298,10 +303,13 @@ class Navbar extends Component {
                                 <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Favourites<i className="material-icons prefix right">arrow_drop_down</i></div>
                                 <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
                                     <ul>
-                                        <li><Link to="/recipes/category/soups-stews-braises" className="black-text sidenav-close" style={{padding:"0 32px"}}>Soups, Stews, and Braises</Link></li>
-                                        <li><Link to="/recipes/category/pasta-noodles" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pasta and Noodles</Link></li>
-                                        <li><Link to="/recipes/category/sandwiches-toasts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Sandwiches and Toasts</Link></li>
-                                        <li><Link to="/recipes/category/bread" className="black-text sidenav-close" style={{padding:"0 32px"}}>Bread</Link></li>
+                                    <li><Link to="/recipes/category/basics" className="black-text sidenav-close" style={{padding:"0 32px"}}>Basics</Link></li>
+                                    <li><Link to="/recipes/category/chicken" className="black-text sidenav-close" style={{padding:"0 32px"}}>Chicken</Link></li>
+                                    <li><Link to="/recipes/category/pork" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pork</Link></li>
+                                    <li><Link to="/recipes/category/project%20recipes" className="black-text sidenav-close" style={{padding:"0 32px"}}>Project Recipes</Link></li>
+                                    <li><Link to="/recipes/category/comfort%20food" className="black-text sidenav-close" style={{padding:"0 32px"}}>Comfort Food</Link></li>
+                                    <li><Link to="/recipes/category/aesthetic" className="black-text sidenav-close" style={{padding:"0 32px"}}>Aesthetic</Link></li>
+                                    <li><Link to="/recipes/category/gift%20ideas" className="black-text sidenav-close" style={{padding:"0 32px"}}>Gift Ideas</Link></li>
                                     </ul>
                                 </div>
                             </li>
