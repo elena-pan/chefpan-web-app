@@ -237,7 +237,7 @@ class Navbar extends Component {
                     </li>
                     <li className="category-header">
                         <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>By Category<i className="material-icons prefix right">arrow_drop_down</i></div>
-                        <div className="collapsible-body" style={{backgroundColor:"#f57f17"}}>
+                        <div className="collapsible-body" style={{backgroundColor:"#f57f17", borderBottom:"2px solid #f57f17"}}>
                             <ul className="collapsible">
                             <li>
                                 <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Course<i className="material-icons prefix right">arrow_drop_down</i></div>
