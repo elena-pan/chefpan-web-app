@@ -9,4 +9,5 @@ The web app is hosted on Heroku's free tier, which sleeps after 30 minutes of in
 * MongoDB and Mongoose
 * Flask
 * React.js - using Redux and React router, bootstrapped with Create React App
+* Google Cloud Storage for files and images
 * Materialize as CSS framework
