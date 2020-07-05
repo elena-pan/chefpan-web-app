@@ -6,7 +6,6 @@ import { addRecipe } from "../../actions/recipeActions";
 import classnames from "classnames";
 import dotenv from "dotenv";
 import M from "materialize-css";
-import axios from "axios";
 
 dotenv.config();
 

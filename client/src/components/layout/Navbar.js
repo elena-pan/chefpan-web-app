@@ -13,12 +13,35 @@ class Navbar extends Component {
         menuBoxShadow: "0 0.1px 3px 0 lightgrey",
         active: "none",
         search: "none",
-        searchInput: ""
+        searchInput: "",
     }
 
     componentDidMount = () => {
         const elems = document.querySelectorAll('.sidenav');
         M.Sidenav.init(elems, { edge:'right' });
+        const elems2 = document.querySelectorAll('.collapsible');
+        M.Collapsible.init(elems2, {
+            onOpenStart: e => {
+                if (e.className==="category-header") {
+                    e.style.backgroundColor="#f57f17"
+                    e.style.color="white"
+                }
+                else {
+                    e.style.backgroundColor="#ffffff"
+                    e.style.color="black"
+                }
+            },
+            onCloseEnd: e => {
+                if (e.className==="category-header") {
+                    e.style.backgroundColor="#ffffff"
+                    e.style.color="black"
+                }
+                else {
+                    e.style.backgroundColor="#f57f17"
+                    e.style.color="white"
+                }
+            }
+        });
     }
 
     onActive = () => {
@@ -206,24 +229,97 @@ class Navbar extends Component {
                         </div>
                     </div>
                 </div>
-                <ul className="sidenav" id="mobile-nav">
+                <ul className="sidenav collapsible" id="mobile-nav">
                     <li>
-                        <Link to="/recipes" className="black-text">
+                        <Link to="/recipes" className="black-text sidenav-close">
                             Recipes
                         </Link>
                     </li>
+                    <li className="category-header">
+                        <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>By Category<i className="material-icons prefix right">arrow_drop_down</i></div>
+                        <div className="collapsible-body" style={{backgroundColor:"#f57f17"}}>
+                            <ul className="collapsible">
+                            <li>
+                                <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Course<i className="material-icons prefix right">arrow_drop_down</i></div>
+                                <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
+                                    <ul>
+                                        <li><Link to="/recipes/category/breakfast-brunch" className="black-text sidenav-close" style={{padding:"0 32px"}}>Breakfast and Brunch</Link></li>
+                                        <li><Link to="/recipes/category/lunch" className="black-text sidenav-close" style={{padding:"0 32px"}}>Lunch</Link></li>
+                                        <li><Link to="/recipes/category/dinner" className="black-text sidenav-close" style={{padding:"0 32px"}}>Dinner</Link></li>
+                                        <li><Link to="/recipes/category/desserts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Desserts</Link></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Dish Type<i className="material-icons prefix right">arrow_drop_down</i></div>
+                                <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
+                                    <ul>
+                                        <li><Link to="/recipes/category/soups-stews-braises" className="black-text sidenav-close" style={{padding:"0 32px"}}>Soups, Stews, and Braises</Link></li>
+                                        <li><Link to="/recipes/category/pasta-noodles" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pasta and Noodles</Link></li>
+                                        <li><Link to="/recipes/category/sandwiches-toasts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Sandwiches and Toasts</Link></li>
+                                        <li><Link to="/recipes/category/bread" className="black-text sidenav-close" style={{padding:"0 32px"}}>Bread</Link></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Cooking Method<i className="material-icons prefix right">arrow_drop_down</i></div>
+                                <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
+                                    <ul>
+                                        <li><Link to="/recipes/category/soups-stews-braises" className="black-text sidenav-close" style={{padding:"0 32px"}}>Soups, Stews, and Braises</Link></li>
+                                        <li><Link to="/recipes/category/pasta-noodles" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pasta and Noodles</Link></li>
+                                        <li><Link to="/recipes/category/sandwiches-toasts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Sandwiches and Toasts</Link></li>
+                                        <li><Link to="/recipes/category/bread" className="black-text sidenav-close" style={{padding:"0 32px"}}>Bread</Link></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Cuisine<i className="material-icons prefix right">arrow_drop_down</i></div>
+                                <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
+                                    <ul>
+                                        <li><Link to="/recipes/category/soups-stews-braises" className="black-text sidenav-close" style={{padding:"0 32px"}}>Soups, Stews, and Braises</Link></li>
+                                        <li><Link to="/recipes/category/pasta-noodles" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pasta and Noodles</Link></li>
+                                        <li><Link to="/recipes/category/sandwiches-toasts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Sandwiches and Toasts</Link></li>
+                                        <li><Link to="/recipes/category/bread" className="black-text sidenav-close" style={{padding:"0 32px"}}>Bread</Link></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Desserts<i className="material-icons prefix right">arrow_drop_down</i></div>
+                                <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
+                                    <ul>
+                                        <li><Link to="/recipes/category/soups-stews-braises" className="black-text sidenav-close" style={{padding:"0 32px"}}>Soups, Stews, and Braises</Link></li>
+                                        <li><Link to="/recipes/category/pasta-noodles" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pasta and Noodles</Link></li>
+                                        <li><Link to="/recipes/category/sandwiches-toasts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Sandwiches and Toasts</Link></li>
+                                        <li><Link to="/recipes/category/bread" className="black-text sidenav-close" style={{padding:"0 32px"}}>Bread</Link></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="collapsible-header" style={{padding:"0 32px", fontWeight:"500"}}>Favourites<i className="material-icons prefix right">arrow_drop_down</i></div>
+                                <div className="collapsible-body" style={{backgroundColor:"#ffffff"}}>
+                                    <ul>
+                                        <li><Link to="/recipes/category/soups-stews-braises" className="black-text sidenav-close" style={{padding:"0 32px"}}>Soups, Stews, and Braises</Link></li>
+                                        <li><Link to="/recipes/category/pasta-noodles" className="black-text sidenav-close" style={{padding:"0 32px"}}>Pasta and Noodles</Link></li>
+                                        <li><Link to="/recipes/category/sandwiches-toasts" className="black-text sidenav-close" style={{padding:"0 32px"}}>Sandwiches and Toasts</Link></li>
+                                        <li><Link to="/recipes/category/bread" className="black-text sidenav-close" style={{padding:"0 32px"}}>Bread</Link></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                    </li>
                     <li>
-                        <Link to="/videos" className="black-text">
+                        <Link to="/videos" className="black-text sidenav-close">
                             Videos
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" className="black-text">
+                        <Link to="/about" className="black-text sidenav-close">
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link to="/contact" className="black-text">
+                        <Link to="/contact" className="black-text sidenav-close">
                             Contact
                         </Link>
                     </li>
