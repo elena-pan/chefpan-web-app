@@ -7,7 +7,7 @@ class About extends Component {
     return (
       <div className="container row" style={{paddingTop:"3rem", paddingBottom:"3rem", minHeight:"80vh"}}>
         <div className="col s12 l6">
-          <img className="circle" src={profile} alt="" style={{width:"100%"}} />
+          <img src={profile} alt="" style={{width:"100%"}} />
         </div>
         <div className="col s12 l6"><h4 style={{paddingBottom:"0.5rem", paddingTop:"2.5vw"}}><b>About Me</b></h4>
           <h6 style={{ lineHeight:"170%" }}>
