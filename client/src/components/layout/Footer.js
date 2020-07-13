@@ -16,7 +16,7 @@ class Footer extends Component {
             <div className="row">
               <div className="col l6 s12">
                     <div><Link to="/">
-                        <img src={logoWhite} alt="Elemations" style={{height:"60px"}} />
+                        <img src={logoWhite} alt="Chef Pan" style={{height:"60px"}} />
                     </Link></div>
               </div>
               <div className="col l4 offset-l2 s12">

@@ -11,7 +11,7 @@ class About extends Component {
         </div>
         <div className="col s12 l6"><h4 style={{paddingBottom:"0.5rem", paddingTop:"2.5vw"}}><b>About Me</b></h4>
           <h6 style={{ lineHeight:"170%" }}>
-            Hey there, Elemations here.
+            Hey there, Chef Pan here.
             This is the realization of my food dreams in a collection of best recipes and techniques, 
             with some documented as videos on my YouTube channel.
           </h6>

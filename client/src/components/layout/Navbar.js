@@ -125,7 +125,7 @@ class Navbar extends Component {
                         <i className="material-icons black-text">menu</i>
                     </Link>
                     <Link to="/">
-                        <img src={logo} alt="Elemations" style={{height:"60px"}} />
+                        <img src={logo} alt="Chef Pan" style={{height:"60px"}} />
                     </Link>
                     <ul className="right">
                             <li style={{paddingLeft:"1rem", paddingRight:"1rem"}}>
