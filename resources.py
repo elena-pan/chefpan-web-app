@@ -34,6 +34,7 @@ def validate(userData, register):
 
 # User resources
 
+"""
 class UserRegistration(Resource):
     def post(self):
         body = request.json
@@ -49,6 +50,7 @@ class UserRegistration(Resource):
                 return {'message':"success"}
             except Exception as e:
                 return str(e), 500
+"""
 
 class UserLogin(Resource):
     def post(self):
