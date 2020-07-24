@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ad64630bf85be2cc8c076564a47cfde3",
+    "revision": "7931475fe393d9e4b703a97174c61bd2",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.d34346ea.chunk.css"
   },
   {
-    "revision": "db9e04a174ad9308dee9",
+    "revision": "3f48aa9f0bc4f14bcbfa",
     "url": "/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.e530c8b5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "db9e04a174ad9308dee9",
-    "url": "/static/js/main.09052bac.chunk.js"
+    "revision": "3f48aa9f0bc4f14bcbfa",
+    "url": "/static/js/main.83524883.chunk.js"
   },
   {
     "revision": "9b4e396c183e42c1fa5c",
     "url": "/static/js/runtime-main.09b85ec0.js"
   },
   {
-    "revision": "901b798afcbfafca31c67c653a15c614",
-    "url": "/static/media/food-dome.901b798a.jpg"
+    "revision": "f2114f747b2dbda6b8d528e8cc0241d8",
+    "url": "/static/media/empty-plate.f2114f74.jpg"
   },
   {
     "revision": "94ea446038ee62a143707f47c6ce3ac3",

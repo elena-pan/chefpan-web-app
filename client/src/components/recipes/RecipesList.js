@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { getRecipes, getRecipesCategory } from "../../actions/recipeActions";
-import image from "../../food-dome.jpg";
+import image from "../../empty-plate.jpg";
 
 import LinearLoadingSymbol from "./loading/LinearLoadingSymbol";
 
