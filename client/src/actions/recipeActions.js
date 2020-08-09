@@ -180,7 +180,7 @@ export const getRecipesCategory = category => dispatch => {
 }
 
 // Check whether or not to load images from Google Cloud Storage
-export const loadImages = () => {
+export const loadImages = () => dispatch => {
     axios.get(`/api/recipes/load-images`)
         .then(res => {
             dispatch({
