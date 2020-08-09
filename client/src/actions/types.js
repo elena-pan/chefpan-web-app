@@ -13,6 +13,7 @@ export const GET_RECIPE = "GET_RECIPE";
 export const RECIPE_LOADING = "RECIPE_LOADING";
 export const GET_RECIPES = "GET_RECIPES";
 export const RECIPES_LOADING = "RECIPES_LOADING";
+export const LOAD_IMAGES = "LOAD_IMAGES";
 
 // YouTube Videos
 export const GET_VIDEOS = "GET_VIDEOS";

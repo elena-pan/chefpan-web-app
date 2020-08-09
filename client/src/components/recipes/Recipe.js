@@ -66,7 +66,7 @@ class Recipe extends Component {
         else {
             btns = (<div></div>)
         }
-        const { recipe, recipes, recipeLoading } = this.props.recipes;
+        const { recipe, recipes, recipeLoading, loadImages } = this.props.recipes;
 
         let content;
 
@@ -110,7 +110,9 @@ class Recipe extends Component {
                         </div>)
             }
             else notes = (<div></div>)
-            if (recipe.img) {
+
+            // Check if we are loading images from Google Cloud Storage
+            if (loadImages && recipe.img) {
                 img = (<div className="col s12"><img src={recipe.img} alt="" style={{objectFit:"cover", height:"400px", width:"100%"}}></img></div>)
             }
             else img = (<div></div>)

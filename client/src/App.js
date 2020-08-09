@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
+import { loadImages } from "./actions/recipeActions";
 
 import ScrollToTop from "./components/layout/ScrollToTop";
 
@@ -48,6 +49,9 @@ if (localStorage.jwtToken) {
       window.location.href = "./login";
   }
 }
+
+// Check from server if we should load images from Google Cloud Storage
+loadImages()
 
 function App() {
   return (

@@ -9,7 +9,8 @@ import {
     GET_RECIPE,
     RECIPE_LOADING,
     GET_RECIPES,
-    RECIPES_LOADING
+    RECIPES_LOADING,
+    LOAD_IMAGES
 } from "./types";
 
 // Add recipe 
@@ -176,4 +177,21 @@ export const getRecipesCategory = category => dispatch => {
             payload: null
         })
     );
+}
+
+// Check whether or not to load images from Google Cloud Storage
+export const loadImages = () => {
+    axios.get(`/api/recipes/load-images`)
+        .then(res => {
+            dispatch({
+                type: LOAD_IMAGES,
+                payload: res.data
+            })
+        })
+        .catch(err => 
+            dispatch({
+                type: LOAD_IMAGES,
+                payload: {loadImages: false}
+            })
+        );
 }

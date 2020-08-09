@@ -22,6 +22,7 @@ jwt_algorithm = os.environ.get("JWT_ALGORITHM")
 sendgrid_api_key = os.environ.get("SENDGRID_API_KEY")
 sendgrid_from_email = os.environ.get("SENDGRID_FROM_EMAIL")
 google_api_credentials = os.environ.get("GOOGLE_API_CREDENTIALS")
+load_images = os.environ.get("LOAD_IMAGES")
 
 UPLOAD_FOLDER = '/images'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -259,6 +260,13 @@ def delete_recipe(id):
         return { 'id': str(id) }
     except Exception as e:
         return Response(str(e), 500)
+
+@app.route('/api/recipes/load-images', methods=['GET'])
+def check_load_images():
+    if (load_images.lower() == 'true'):
+        return {'loadImages': True}
+    else:
+        return {'loadImages': False}
 
 # Serve React App
 @app.route('/', defaults={'path': ''})

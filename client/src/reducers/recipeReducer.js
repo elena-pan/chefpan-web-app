@@ -5,14 +5,16 @@ import {
     GET_RECIPE,
     RECIPE_LOADING,
     GET_RECIPES,
-    RECIPES_LOADING
+    RECIPES_LOADING,
+    LOAD_IMAGES
 } from "../actions/types";
 
 const initialState = {
     recipes: [],
     recipe: [],
     recipeLoading: false,
-    recipesLoading: false
+    recipesLoading: false,
+    loadImages: false
 };
 
 export default function(state = initialState, action) {
@@ -62,6 +64,11 @@ export default function(state = initialState, action) {
           ...state,
           recipesLoading: true
         };
+      case LOAD_IMAGES:
+        return {
+          ...state,
+          loadImages: action.payload.loadImages
+        }
       default:
         return state;
     }
