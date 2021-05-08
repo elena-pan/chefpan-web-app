@@ -15,7 +15,7 @@ from db.models import Recipe, User
 import resources
 
 app = Flask(__name__, static_folder='./client/build')
-Talisman(app, content_security_policy = {'default-src':'*','script-src':'unsafe-inline'}) # Force https
+Talisman(app, content_security_policy = {'default-src':'*','script-src':['unsafe-inline']}) # Force https
 
 load_dotenv()
 mongo_uri = os.environ.get("MONGO_URI")
