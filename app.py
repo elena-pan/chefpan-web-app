@@ -2,6 +2,7 @@ import os, jwt, re, json, datetime
 from flask import Flask, request, Response, send_from_directory
 from werkzeug.utils import secure_filename
 from flask_restful import Api
+from flask_talisman import Talisman
 from dotenv import load_dotenv
 from flask_mongoengine import MongoEngine
 from mongoengine.queryset.visitor import Q
@@ -14,6 +15,7 @@ from db.models import Recipe, User
 import resources
 
 app = Flask(__name__, static_folder='./client/build')
+Talisman(app) # Force https
 
 load_dotenv()
 mongo_uri = os.environ.get("MONGO_URI")
