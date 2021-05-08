@@ -9,7 +9,6 @@ dnspython==1.16.0
 Flask==1.1.2
 flask-mongoengine==0.9.5
 Flask-RESTful==0.3.8
-flask-talisman==0.7.0
 Flask-WTF==0.14.3
 google-api-core==1.21.0
 google-auth==1.18.0

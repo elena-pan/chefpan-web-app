@@ -2,7 +2,6 @@ import os, jwt, re, json, datetime
 from flask import Flask, request, Response, send_from_directory
 from werkzeug.utils import secure_filename
 from flask_restful import Api
-from flask_talisman import Talisman
 from dotenv import load_dotenv
 from flask_mongoengine import MongoEngine
 from mongoengine.queryset.visitor import Q
@@ -15,7 +14,6 @@ from db.models import Recipe, User
 import resources
 
 app = Flask(__name__, static_folder='./client/build')
-Talisman(app, content_security_policy=None) # Force https
 
 load_dotenv()
 mongo_uri = os.environ.get("MONGO_URI")
@@ -274,12 +272,10 @@ def check_load_images():
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve(path):
-    return send_from_directory(app.static_folder, 'index.html')
-    # This will send any files that are in the static folder that match the path so don't do this
-    # if path != "" and os.path.exists(app.static_folder + '/' + path):
-    #     return send_from_directory(app.static_folder, path)
-    # else:
-    #     return send_from_directory(app.static_folder, 'index.html')
+    if path != "" and os.path.exists(app.static_folder + '/' + path) and path.startswith("static/media"):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
     app.run()
