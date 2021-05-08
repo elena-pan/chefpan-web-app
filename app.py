@@ -1,5 +1,5 @@
 import os, jwt, re, json, datetime
-from flask import Flask, request, Response, send_from_directory
+from flask import Flask, request, redirect, Response, send_from_directory
 from werkzeug.utils import secure_filename
 from flask_restful import Api
 from dotenv import load_dotenv
@@ -14,6 +14,7 @@ from db.models import Recipe, User
 import resources
 
 app = Flask(__name__, static_folder='./client/build')
+app.before_request(force_https)
 
 load_dotenv()
 mongo_uri = os.environ.get("MONGO_URI")
@@ -37,6 +38,23 @@ api = Api(app)
 
 #api.add_resource(resources.UserRegistration, '/api/users/register')
 api.add_resource(resources.UserLogin, '/api/users/login')
+
+def force_https():
+    """Redirect any non-https requests to https.
+    """
+    criteria = [
+        app.debug,
+        request.is_secure,
+        request.headers.get('X-Forwarded-Proto', 'http') == 'https',
+    ]
+
+    if not any(criteria):
+        if request.url.startswith('http://'):
+            url = request.url.replace('http://', 'https://', 1)
+            r = redirect(url)
+            return r
+            
+app.before_request(force_https)
 
 def validateContactForm(contactFormData):
     errors = {}
