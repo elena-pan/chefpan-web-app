@@ -14,7 +14,6 @@ from db.models import Recipe, User
 import resources
 
 app = Flask(__name__, static_folder='./client/build')
-app.before_request(force_https)
 
 load_dotenv()
 mongo_uri = os.environ.get("MONGO_URI")
@@ -53,7 +52,7 @@ def force_https():
             url = request.url.replace('http://', 'https://', 1)
             r = redirect(url)
             return r
-            
+
 app.before_request(force_https)
 
 def validateContactForm(contactFormData):
