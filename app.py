@@ -272,12 +272,12 @@ def check_load_images():
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve(path):
-    # return send_from_directory(app.static_folder, 'index.html')
+    return send_from_directory(app.static_folder, 'index.html')
     # This will send any files that are in the static folder that match the path so don't do this
-    if path != "" and os.path.exists(app.static_folder + '/' + path):
-        return send_from_directory(app.static_folder, path)
-    else:
-        return send_from_directory(app.static_folder, 'index.html')
+    # if path != "" and os.path.exists(app.static_folder + '/' + path):
+    #     return send_from_directory(app.static_folder, path)
+    # else:
+    #     return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
     app.run()
